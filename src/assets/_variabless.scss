@@ -1,0 +1,15 @@
+$primary: #0075BE;
+$primary-dark: #0A285F;
+$secondary: #FFCC00;
+$secondary-dark: #D5A100;
+
+$theme-colors: (
+        primary: $primary,
+        secondary: $secondary,
+        primary-dark: $primary-dark,
+        secondary-dark: $secondary-dark,
+);
+
+@import "bootstrap/scss/bootstrap";
+
+

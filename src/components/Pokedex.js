@@ -6,10 +6,12 @@ const Pokedex = () => {
 
 	return (
 		<section className="container my-3 d-flex flex-column">
-			<h1> Pokedex </h1>
+			<h1 className="py-3 display-1">
+				Pokedex
+			</h1>
 			<div className="d-flex flex-wrap my-4">
 				{selectedPokemons.map((pokemon, key) =>
-					<article key={key} className="p-2 my-2 mx-3 btn">
+					<article key={key} className="p-2 my-2 mx-3 btn btn-primary">
 						{pokemon}
 					</article>
 				)}

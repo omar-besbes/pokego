@@ -1,14 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {RecoilRoot} from "recoil";
 import {QueryClient, QueryClientProvider} from "react-query";
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
+import './index.css';
+import './assets/fonts/style.css';
+import './assets/_variabless.scss';
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient({
+    defaultOptions: {
+        queries: {
+            suspense: true
+        }
+    }
+});
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

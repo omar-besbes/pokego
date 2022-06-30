@@ -1,15 +1,16 @@
-import './App.css';
 import PokeSearch from "./components/PokeSearch";
 import PokeList from "./components/PokeList";
 import Pokedex from "./components/Pokedex";
+import {Suspense} from "react";
+import suspense from "./components/Suspense";
 
 function App() {
 	return (
-		<main className="d-flex flex-column container">
+		<main className="d-flex flex-column position-relative">
 			{/*	Header or Breadcrumbs or sthg */}
-			<Pokedex/>
-			<PokeSearch/>
-			<PokeList/>
+			<Suspense fallback={suspense}><Pokedex/></Suspense>
+			<Suspense fallback={suspense}><PokeSearch/></Suspense>
+			<Suspense fallback={suspense}><PokeList/></Suspense>
 		</main>
 	);
 }
