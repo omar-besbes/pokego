@@ -1,8 +1,12 @@
 :root {
-  --bs-primary: #0075BE;
-  --bs-primary-dark: #0A285F;
-  --bs-secondary: #FFCC00;
-  --bs-secondary-dark: #D5A100;
+    --bs-primary: #0075BE;
+    --bs-primary-rgb: 0, 117, 190;
+    --bs-primary-dark: #0A285F;
+    --bs-primar-dark-rgb: 10, 40, 95;
+    --bs-secondary: #FFCC00;
+    --bs-secondary-rgb: 255, 204, 0;
+    --bs-secondary-dark: #D5A100;
+    --bs-secondar-dark-rgb: 213, 161, 0;
 }
 
 body {
@@ -20,7 +24,41 @@ code {
     monospace;
 }
 
+main {
+    display: flex;
+    flex-flow: column;
+    position: relative;
+}
+
 h1 {
     text-transform: capitalize;
     color: var(--bs-primary);
+}
+
+img {
+    object-fit: cover;
+    background-size: cover;
+    transform: scale(0.8);
+}
+
+.section {
+    display: flex;
+    padding: 5em 3em 2em;
+    flex-flow: row;
+}
+
+.section.pokedex {
+    background: rgb(var(--bs-secondary-rgb), 30%);
+    height: 100vh;
+}
+
+.section.pokesearch {
+    flex-flow: column;
+    align-items: center;
+    background: rgb(var(--bs-primary-rgb), 20%);
+}
+
+.section.pokelist {
+    flex-flow: column;
+    background: rgb(var(--bs-primary-rgb), 20%);
 }
